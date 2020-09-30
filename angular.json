@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-cf"
+    }
+  },
+  "defaultProject": "angular-cf",
+  "cli": {
+    "analytics": false
+  }
 }
