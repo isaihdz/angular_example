@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
   selector: 'title',
   templateUrl: 'title.component.html',
 })
-export class TitleComponent {}
+export class TitleComponent {
+  public name: string = 'Isaí ';
+}
