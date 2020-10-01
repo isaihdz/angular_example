@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { title } from 'process';
 
 @Component({
   selector: 'title',
   templateUrl: 'title.component.html',
+  styleUrls: ['title.component.scss'],
 })
 export class TitleComponent implements OnInit {
   public name: string;
