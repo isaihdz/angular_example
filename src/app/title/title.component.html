@@ -1,5 +1,11 @@
 <h1>Curso angular</h1>
-<h3>{{ name }}</h3>
+<h3>Alumno: {{ name }}</h3>
+<p *ngIf="!isAvailable; else available">Lanzamiento: 25 Dic 2018</p>
+
+<ng-template #available>
+  <span class="highlight">Curso disponible</span>
+</ng-template>
+
 <!-- property binding
   <button [disabled]='!isAvailable' [class.active]="!isAvailable"  type="button"
   name="button">Inscribirse</button>-->
@@ -16,6 +22,7 @@
   *object configuration
   [ngClass]="{active: isAvailable}"
   --->
-
-<button [disabled]='!isAvailable' [ngClass]="{active: isAvailable, shadow: !isAvailable}" type="button"
-  name="button">Inscribirse</button>
+<div>
+  <button [disabled]='!isAvailable' [ngClass]="{active: isAvailable, shadow: !isAvailable}" type="button"
+    name="button">Inscribirse</button>
+</div>
