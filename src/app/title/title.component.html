@@ -1,3 +1,21 @@
 <h1>Curso angular</h1>
 <h3>{{ name }}</h3>
-<button [disabled]='!isAvailable' [class.active]="!isAvailable" type="button" name="button">Inscribirse</button>
+<!-- property binding
+  <button [disabled]='!isAvailable' [class.active]="!isAvailable"  type="button"
+  name="button">Inscribirse</button>-->
+<!-- ngClass -->
+
+<!--
+  use type
+  *array of strings
+  the use can  be with one o many classes within  the array
+  [ngClass]="['active', 'shadow']"
+  *with class
+  the class is a property that us declared in the component, in file title.component.ts
+  [ngClass]="css_classes"
+  *object configuration
+  [ngClass]="{active: isAvailable}"
+  --->
+
+<button [disabled]='!isAvailable' [ngClass]="{active: isAvailable, shadow: !isAvailable}" type="button"
+  name="button">Inscribirse</button>

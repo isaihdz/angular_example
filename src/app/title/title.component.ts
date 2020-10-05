@@ -10,6 +10,9 @@ export class TitleComponent implements OnInit {
   public name: string;
   public edad: number;
   public edades: number[];
+
+  public css_classes: string[] = ['active', 'shadow'];
+
   public isAvailable: boolean = true;
 
   /*constructor() {
@@ -23,6 +26,7 @@ export class TitleComponent implements OnInit {
 
     setTimeout(() => (this.name = 'Iasí'), 3000);
     setTimeout(() => (this.isAvailable = false), 3000);
+    setTimeout(() => (this.css_classes = ['shadow']), 3000);
   }
 
   getEdadNombre(): string {
