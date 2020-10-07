@@ -3,9 +3,16 @@
 <ng-template #available>
   <span class="highlight">Curso disponible</span>
 </ng-template>
+
+<div class="category" [ngSwitch]="category">
+  <span *ngSwitchCase="'web'">Desarrollo web</span>
+  <span *ngSwitchCase="'mobile'">Desarrollo móvil</span>
+  <span *ngSwitchCase="'other'">Desarrollo General</span>
+  <span *ngSwitchDefault>No especificado</span>
+</div>
 <h3>Alumno: {{ name }}</h3>
 <div>
-  <a>Más Información <i class="fa" [ngClass]=" {'fa-chevron-circle-down':!moreInformation,
+  <a (click)="toggleMoreInformation()">Más Información <i class="fa" [ngClass]=" {'fa-chevron-circle-down':!moreInformation,
   'fa-chevron-circle-up': moreInformation}"></i></a>
   <p *ngIf="moreInformation">
     Este es u curso de angular con duración de 3 horas en el que aprenderas

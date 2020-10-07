@@ -10,11 +10,13 @@ export class TitleComponent implements OnInit {
   public name: string;
   public moreInformation: boolean = false;
   public isAvailable: boolean = true;
+  public category: string; //mobile, web, other
   public topics: string[];
   constructor() {}
 
   ngOnInit() {
     this.name = 'Isaí';
+    this.category = 'web';
     this.topics = [
       'Fundamentos',
       'Componentes',
@@ -24,5 +26,9 @@ export class TitleComponent implements OnInit {
       'RxJS',
       'Binding',
     ];
+  }
+
+  toggleMoreInformation() {
+    this.moreInformation = !this.moreInformation;
   }
 }
