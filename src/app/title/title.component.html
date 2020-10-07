@@ -1,5 +1,15 @@
 <h1>Curso angular</h1>
 <h3>Alumno: {{ name }}</h3>
+<div>
+  <a>Más Información <i class="fa" [ngClass]=" {'fa-chevron-circle-down':!moreInformation,
+  'fa-chevron-circle-up': moreInforation}"></i></a>
+  <p *ngIf="moreInformation">
+    Este es u curso de angular con duración de 3 horas en el que aprenderas
+    componentes, Servicios, animaciones, Módulos, fundamentos del framework y
+    mucho más.
+  </p>
+</div>
+
 <p *ngIf="!isAvailable; else available">Lanzamiento: 25 Dic 2018</p>
 
 <ng-template #available>
@@ -23,6 +33,8 @@
   [ngClass]="{active: isAvailable}"
   --->
 <div>
-  <button [disabled]='!isAvailable' [ngClass]="{active: isAvailable, shadow: !isAvailable}" type="button"
-    name="button">Inscribirse</button>
+  <button [disabled]="!isAvailable" [ngClass]="{ active: isAvailable, shadow: !isAvailable }" type="button"
+    name="button">
+    Inscribirse
+  </button>
 </div>
