@@ -12,12 +12,18 @@
   background: black;
   color: white;
 }
+
+h3 {
+  margin: 0;
+}
+
 a {
   cursor: pointer;
   display: inline-block;
   margin: 1em 0;
   text-decoration: underline;
 }
+
 .highlight {
   background: rgb(200, 50, 50);
   border-radius: 4px;

@@ -8,32 +8,21 @@ import { title } from 'process';
 })
 export class TitleComponent implements OnInit {
   public name: string;
-  public edad: number;
-  public edades: number[];
-
   public moreInformation: boolean = false;
-
-  /*public css_classes: string[] = ['active', 'shadow'];*/
-
   public isAvailable: boolean = true;
-
-  /*constructor() {
-    this.name = 'Isaí';
-    this.edad = 27;}*/
+  public topics: string[];
   constructor() {}
 
   ngOnInit() {
     this.name = 'Isaí';
-    this.edad = 27;
-
-    setTimeout(() => (this.name = 'Iasí'), 3000);
-    setTimeout(() => (this.moreInformation = true), 3000);
-    /*setTimeout(() => (this.isAvailable = false), 3000);
-    setTimeout(() => (this.css_classes = ['shadow']), 3000);*/
-  }
-
-  getEdadNombre(): string {
-    /**interpolation with string type js */
-    return `${this.name} : ${this.edad}`;
+    this.topics = [
+      'Fundamentos',
+      'Componentes',
+      'Directivas',
+      'Animaciones',
+      'Servicios',
+      'RxJS',
+      'Binding',
+    ];
   }
 }
