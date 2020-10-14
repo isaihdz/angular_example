@@ -17,4 +17,8 @@ export class UserCardComponent implements OnInit {
     this.username = 'Iasi_zdh';
     this.avatar = 'https://avatarfiles.alphacoders.com/223/223772.jpg';
   }
+
+  changing(event: any): void{
+    this.username = event.target.value;
+  }
 }

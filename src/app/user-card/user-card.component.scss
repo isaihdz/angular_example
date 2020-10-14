@@ -13,8 +13,7 @@
   display: grid;
   grid-template-areas: "imagen imagen username"
                        "imagen imagen name";
-  grid-template-rows:  100px 100px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   img{
     height: 100%;
     grid-area: imagen;
@@ -27,5 +26,13 @@
   }
   .name{
     grid-area: name;
+  }
+  .inputs-change-values{
+    display: contents;
+    width: 100%;
+    input[type="text"] {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }
